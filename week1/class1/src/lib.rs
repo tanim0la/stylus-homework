@@ -20,20 +20,12 @@ impl Erc20Params for RareTokenParams {
 // Refer to the README for guide
 sol_storage! {
     #[entrypoint]
-    pub struct RareToken{
-        #[borrow]
-        Erc20<RareTokenParams> erc20;
-    }
-}
-
-// Refer to the README for guide
-sol_storage! {
-    #[entrypoint]
     pub struct /* 1. ______ */ {
         #[borrow]
         Erc20<RareTokenParams> erc20;
     }
 }
+
 
 #[/* 2. ______ */]
 #[inherit(Erc20<RareTokenParams>)]
